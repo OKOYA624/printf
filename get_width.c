@@ -4,7 +4,7 @@
  * get_width - calculates width for printing
  * @format: formatted string in which to print the arguments
  * @i: list of arguments to be printed
- * @list:list of arguments
+ * @list: list of arguments
  * Return: width
  */
 
