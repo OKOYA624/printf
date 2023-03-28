@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * is_printable - evaluates if char is printable
- * @c: char to be evaluated
- * Return: 1 if c is printable, 0 otherwise
- */
+* is_printable - evaluates if char is printable
+* @c: char to be evaluated
+* Return: 1 if c is printable, 0 otherwise
+*/
 
 int is_printable(char c)
 
@@ -16,12 +16,12 @@ int is_printable(char c)
 }
 
 /**
- * append_hexa_code - append ascii in hexadecimal code to buffer
- * @buffer: array of chars
- * @i: index at which to start appending
- * @ascii_code: ASCII code
- * Return: always 3
- */
+* append_hexa_code - append ascii in hexadecimal code to buffer
+* @buffer: array of chars
+* @i: index at which to start appending
+* @ascii_code: ASCII code
+* Return: always 3
+*/
 
 int append_hexa_code(char ascii_code, char buffer[], int i)
 
@@ -41,10 +41,10 @@ int append_hexa_code(char ascii_code, char buffer[], int i)
 }
 
 /**
- * is_digit - verifies if char is digit
- * @c: char to be evaluated
- * Return: 1 if c is digit, 0 otherwise
- */
+* is_digit - verifies if char is digit
+* @c: char to be evaluated
+* Return: 1 if c is digit, 0 otherwise
+*/
 
 int is_digit(char c)
 
@@ -56,11 +56,11 @@ int is_digit(char c)
 }
 
 /**
- * convert_size_number - casts number to specified size
- * @num: number to be casted
- * @size: number indicating type to be casted
- * Return: casted value of num
- */
+* convert_size_number - casts number to specified size
+* @num: number to be casted
+* @size: number indicating type to be casted
+* Return: casted value of num
+*/
 
 long int convert_size_number(long int num, int size)
 
@@ -74,19 +74,19 @@ long int convert_size_number(long int num, int size)
 }
 
 /**
- * convert_size_unsgnd - casts number to specified size
- * @num: number to be casted
- * @size: number indicating type to be casted
- * Return: casted value of num
- */
+* convert_size_unsgnd - casts number to specified size
+* @num: number to be casted
+* @size: number indicating type to be casted
+* Return: casted value of num
+*/
 
 long int convert_size_unsgnd(unsigned long int num, int size)
 
 {
-        if (size == S_LONG)
-                return (num);
-        else if (size == S_SHORT)
-                return ((unsigned short)num);
+if (size == S_LONG)
+return (num);
+else if (size == S_SHORT)
+return ((unsigned short)num);
 
-        return ((unsigned int)num);
+return ((unsigned int)num);
 }
