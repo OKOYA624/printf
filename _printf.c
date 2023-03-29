@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-<<<<<<< HEAD
 			format++;
 			switch (*format)
 			{
@@ -41,31 +40,11 @@ case 'd':
 		else
 		{
 			count += printf("%c", *format);
-=======
-			buffer[buff_ind++] = format[i];
-			if (buff_ind == BUFF_SIZE)
-				print_buffer(buffer, &buff_ind);
-			/* write(1, &format[i], 1); */
-			print_char++;
-		}
-		else
-		{
-			print_buffer(buffer, &buff_ind);
-			flags = get_flags(format, &i);
-			width = get_width(format, &i, list);
-			precision = get_precision(format, &i, list);
-			size = get_size(format, &i);
-			++i;
-			printed = handle_print(format, &i, list,
-				buffer, flags, width, precision, size);
-			if (printed == -1)
-				return (-1);
-			printed_chars += printed;
->>>>>>> 28414cd2ac9b96b61dc461fdc2cf806c3876adbc
 		}
 
 		format++;
 	}
+
 	va_end(args);
 	return (count);
 }
