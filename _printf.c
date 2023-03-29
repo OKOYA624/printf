@@ -1,10 +1,14 @@
 #include <stdarg.h>
 #include <stdio.h>
+
 /**
-* _printf - Print formatted output to stdout
-* @format: A string that specifies the format of the output
-* Return: The number of characters printed (excluding the null byte used
-*/
+ * _printf - Print formatted output to stdout
+ *
+ * @format: A string that specifies the format of the output
+ *
+ * Return: The number of characters printed (excluding the null byte used
+ *         to end output to strings), or -1 if an error occurs
+ */
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -25,7 +29,7 @@ int _printf(const char *format, ...)
 				case 's':
 					count += printf("%s", va_arg(args, char *));
 					break;
-case 'd':
+					case 'd':
 				case 'i':
 					count += printf("%d", va_arg(args, int));
 					break;
@@ -46,5 +50,6 @@ case 'd':
 	}
 
 	va_end(args);
+
 	return (count);
 }
